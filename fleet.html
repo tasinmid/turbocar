@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Fleet | Turbo Rent a Car</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-bolt"></i></span>
+                <span class="logo-text">TURBO</span>
+                <span class="logo-sub">RENT A CAR</span>
+            </a>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="fleet.html" class="nav-link active">Fleet</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="tel:+97317221211" class="nav-phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+973 17221211</span>
+                </a>
+                <a href="fleet.html" class="btn btn-primary">Book Now</a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Our Fleet</h1>
+            <p class="page-subtitle">Explore our premium collection of vehicles for every journey</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Fleet</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Page -->
+    <section class="fleet-page">
+        <div class="container">
+            <div class="fleet-layout">
+                <!-- Sidebar Filters -->
+                <aside class="fleet-sidebar">
+                    <h3 class="sidebar-title">Filter Cars</h3>
+                    
+                    <div class="filter-group">
+                        <label>Car Type</label>
+                        <select id="filterType">
+                            <option value="">All Types</option>
+                            <option value="economy">Economy</option>
+                            <option value="sedan">Sedan</option>
+                            <option value="suv">SUV</option>
+                            <option value="luxury">Luxury</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Brand</label>
+                        <select id="filterBrand">
+                            <option value="">All Brands</option>
+                            <option value="nissan">Nissan</option>
+                            <option value="toyota">Toyota</option>
+                            <option value="hyundai">Hyundai</option>
+                            <option value="bmw">BMW</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="mitsubishi">Mitsubishi</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Transmission</label>
+                        <select id="filterTrans">
+                            <option value="">All</option>
+                            <option value="auto">Automatic</option>
+                            <option value="manual">Manual</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Price Range (Daily)</label>
+                        <div class="price-range">
+                            <input type="number" placeholder="Min" id="priceMin">
+                            <span>-</span>
+                            <input type="number" placeholder="Max" id="priceMax">
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary filter-btn" onclick="applyFilters()">
+                        <i class="fas fa-filter"></i> Apply Filters
+                    </button>
+                </aside>
+                
+                <!-- Main Content -->
+                <div class="fleet-main">
+                    <!-- Toolbar -->
+                    <div class="fleet-toolbar">
+                        <span class="results-count">Showing 10 vehicles</span>
+                        <div class="fleet-sort">
+                            <label>Sort by:</label>
+                            <select id="sortBy">
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="name">Name: A to Z</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Car Grid -->
+                    <div class="fleet-cars">
+                        <!-- Car 1 -->
+                        <div class="car-card" data-type="economy" data-brand="nissan" data-price="12">
+                            <div class="car-image">
+                                <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600&q=80" alt="Nissan Sunny">
+                                <span class="car-badge economy">Economy</span>
+                            </div>
+                            <div class="car-details">
+                                <h3 class="car-name">Nissan Sunny</h3>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-user"></i> 5 Seats</span>
+                                    <span><i class="fas fa-cog"></i> Auto</span>
+                                    <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price-amount">BHD 12</span>
+                                    <span class="price-period">/day</span>
+                                </div>
+                                <a href="car-detail.html" class="btn btn-outline">View Details</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Car 2 -->
+                        <div class="car-card" data-type="sedan" data-brand="toyota" data-price="15">
+                            <div class="car-image">
+                                <img src="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=600&q=80" alt="Toyota Corolla">
+                                <span class="car-badge sedan">Sedan</span>
+                            </div>
+                            <div class="car-details">
+                                <h3 class="car-name">Toyota Corolla</h3>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-user"></i> 5 Seats</span>
+                                    <span><i class="fas fa-cog"></i> Auto</span>
+                                    <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price-amount">BHD 15</span>
+                                    <span class="price-period">/day</span>
+                                </div>
+                                <a href="car-detail.html" class="btn btn-outline">View Details</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Car 3 -->
+                        <div class="car-card" data-type="sedan" data-brand="hyundai" data-price="18">
+                            <div class="car-image">
+                                <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=600&q=80" alt="Hyundai Sonata">
+                                <span class="car-badge sedan">Sedan</span>
+                            </div>
+                            <div class="car-details">
+                                <h3 class="car-name">Hyundai Sonata</h3>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-user"></i> 5 Seats</span>
+                                    <span><i class="fas fa-cog"></i> Auto</span>
+                                    <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price-amount">BHD 18</span>
+                                    <span class="price-period">/day</span>
+                                </div>
+                                <a href="car-detail.html" class="btn btn-outline">View Details</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Car 4 -->
+                        <div class="car-card" data-type="suv" data-brand="nissan" data-price="16">
+                            <div class="car-image">
+                                <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=600&q=80" alt="Nissan Kicks">
+                                <span class="car-badge suv">SUV</span>
+                            </div>
+                            <div class="car-details">
+                                <h3 class="car-name">Nissan Kicks</h3>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-user"></i> 5 Seats</span>
+                                    <span><i class="fas fa-cog"></i> Auto</span>
+                                    <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price-amount">BHD 16</span>
+                                    <span class="price-period">/day</span>
+                                </div>
+                                <a href="car-detail.html" class="btn btn-outline">View Details</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Car 5 -->
+                        <div class="car-card" data-type="sedan" data-brand="toyota" data-price="22">
+                            <div class="car-image">
+                                <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600&q=80" alt="Toyota Camry">
+                                <span class="car-badge premium">Premium</span>
+                            </div>
+                            <div class="car-details">
+                                <h3 class="car-name">Toyota Camry</h3>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-user"></i> 5 Seats</span>
+                                    <span><i class="fas fa-cog"></i> Auto</span>
+                                    <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price-amount">BHD 22</span>
+                                    <span class="price-period">/day</span>
+                                </div>
+                                <a href="car-detail.html" class="btn btn-outline">View Details</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Car 6 -->
+                        <div class="car-card" data-type="suv" data-brand="toyota" data-price="28">
+                            <div class="car-image">
+                                <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&q=80" alt="Toyota Fortuner">
+                                <span class="car-badge suv">SUV</span>
+                            </div>                            <div class="car-details">
+                                <h3 class="car-name">Toyota Fortuner</h3>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-user"></i> 7 Seats</span>
+                                    <span><i class="fas fa-cog"></i> Auto</span>
+                                    <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price-amount">BHD 28</span>
+                                    <span class="price-period">/day</span>
+                                </div>
+                                <a href="car-detail.html" class="btn btn-outline">View Details</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Car 7 -->
+                        <div class="car-card" data-type="suv" data-brand="mitsubishi" data-price="35">
+                            <div class="car-image">
+                                <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=600&q=80" alt="Mitsubishi Pajero">
+                                <span class="car-badge luxury">Luxury SUV</span>
+                            </div>
+                            <div class="car-details">
+                                <h3 class="car-name">Mitsubishi Pajero</h3>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-user"></i> 7 Seats</span>
+                                    <span><i class="fas fa-cog"></i> Auto</span>
+                                    <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price-amount">BHD 35</span>
+                                    <span class="price-period">/day</span>
+                                </div>
+                                <a href="car-detail.html" class="btn btn-outline">View Details</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Car 8 -->
+                        <div class="car-card" data-type="luxury" data-brand="bmw" data-price="45">
+                            <div class="car-image">
+                                <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600&q=80" alt="BMW 3 Series">
+                                <span class="car-badge luxury">Luxury</span>
+                            </div>
+                            <div class="car-details">
+                                <h3 class="car-name">BMW 3 Series</h3>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-user"></i> 5 Seats</span>
+                                    <span><i class="fas fa-cog"></i> Auto</span>
+                                    <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price-amount">BHD 45</span>
+                                    <span class="price-period">/day</span>
+                                </div>
+                                <a href="car-detail.html" class="btn btn-outline">View Details</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Car 9 -->
+                        <div class="car-card" data-type="luxury" data-brand="mercedes" data-price="55">
+                            <div class="car-image">
+                                <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&q=80" alt="Mercedes C-Class">
+                                <span class="car-badge luxury">Luxury</span>
+                            </div>
+                            <div class="car-details">
+                                <h3 class="car-name">Mercedes C-Class</h3>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-user"></i> 5 Seats</span>
+                                    <span><i class="fas fa-cog"></i> Auto</span>
+                                    <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price-amount">BHD 55</span>
+                                    <span class="price-period">/day</span>
+                                </div>
+                                <a href="car-detail.html" class="btn btn-outline">View Details</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Car 10 -->
+                        <div class="car-card" data-type="suv" data-brand="chevrolet" data-price="40">
+                            <div class="car-image">
+                                <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&q=80" alt="Chevrolet Tahoe">
+                                <span class="car-badge luxury">Luxury SUV</span>
+                            </div>
+                            <div class="car-details">
+                                <h3 class="car-name">Chevrolet Tahoe</h3>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-user"></i> 8 Seats</span>
+                                    <span><i class="fas fa-cog"></i> Auto</span>
+                                    <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price-amount">BHD 40</span>
+                                    <span class="price-period">/day</span>
+                                </div>
+                                <a href="car-detail.html" class="btn btn-outline">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="fleet-pagination">
+                        <button class="pagination-btn active">1</button>
+                        <button class="pagination-btn">2</button>
+                        <button class="pagination-btn">3</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <span class="logo-icon"><i class="fas fa-bolt"></i></span>
+                            <span class="logo-text">TURBO</span>
+                        </a>
+                        <p class="footer-desc">Premium car rental services in Bahrain. Experience the thrill of driving with our exceptional fleet.</p>
+                        <div class="footer-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="fleet.html">Our Fleet</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="services.html">Daily Rental</a></li>
+                            <li><a href="services.html">Monthly Rental</a></li>
+                            <li><a href="services.html">Airport Transfer</a></li>
+                            <li><a href="services.html">Corporate Rental</a></li>
+                            <li><a href="services.html">Chauffeur Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Salimabad, Bahrain</li>
+                            <li><i class="fas fa-phone-alt"></i> +973 17221211</li>
+                            <li><i class="fab fa-whatsapp"></i> +973 39509922</li>
+                            <li><i class="fas fa-envelope"></i> info@turbocarbh.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 Turbo Rent a Car. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Filter functionality
+        function applyFilters() {
+            const type = document.getElementById('filterType').value;
+            const brand = document.getElementById('filterBrand').value;
+            const trans = document.getElementById('filterTrans').value;
+            const priceMin = parseInt(document.getElementById('priceMin').value) || 0;
+            const priceMax = parseInt(document.getElementById('priceMax').value) || Infinity;
+            
+            const cars = document.querySelectorAll('.car-card');
+            
+            cars.forEach(car => {
+                const carType = car.dataset.type;
+                const carBrand = car.dataset.brand;
+                const carPrice = parseInt(car.dataset.price);
+                
+                const typeMatch = !type || carType === type;
+                const brandMatch = !brand || carBrand === brand;
+                const priceMatch = carPrice >= priceMin && carPrice <= priceMax;
+                
+                if (typeMatch && brandMatch && priceMatch) {
+                    car.style.display = '';
+                } else {
+                    car.style.display = 'none';
+                }
+            });
+        }
+        
+        // Sorting functionality
+        document.getElementById('sortBy').addEventListener('change', function() {
+            const container = document.querySelector('.fleet-cars');
+            const cars = Array.from(document.querySelectorAll('.car-card'));
+            
+            const sortBy = this.value;
+            
+            cars.sort((a, b) => {
+                const priceA = parseInt(a.dataset.price);
+                const priceB = parseInt(b.dataset.price);
+                const nameA = a.querySelector('.car-name').textContent;
+                const nameB = b.querySelector('.car-name').textContent;
+                
+                if (sortBy === 'price-low') return priceA - priceB;
+                if (sortBy === 'price-high') return priceB - priceA;
+                if (sortBy === 'name') return nameA.localeCompare(nameB);
+            });
+            
+            cars.forEach(car => container.appendChild(car));
+        });
+    </script>
+</body>
+</html>

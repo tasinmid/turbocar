@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turbo Rent a Car | Drive Beyond Expectations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-bolt"></i></span>
+                <span class="logo-text">TURBO</span>
+                <span class="logo-sub">RENT A CAR</span>
+            </a>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="fleet.html" class="nav-link">Fleet</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="tel:+97317221211" class="nav-phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+973 17221211</span>
+                </a>
+                <a href="fleet.html" class="btn btn-primary">Book Now</a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">Premium Car Rental in Bahrain</span>
+                <h1 class="hero-title">Drive Beyond<br><span class="highlight">Expectations</span></h1>
+                <p class="hero-subtitle">Experience the thrill of premium vehicles with exceptional service. Your journey starts here.</p>
+                <div class="hero-buttons">
+                    <a href="fleet.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-car"></i> Explore Fleet
+                    </a>
+                    <a href="contact.html" class="btn btn-outline btn-lg">
+                        <i class="fas fa-phone-alt"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="car-showcase">
+                    <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80" alt="Premium Car" class="hero-car">
+                    <div class="car-glow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number" data-count="150">0</span>
+                <span class="stat-label">Premium Vehicles</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-count="5000">0</span>
+                <span class="stat-label">Happy Clients</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-count="10">0</span>
+                <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-count="24">0</span>
+                <span class="stat-label">/7 Support</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Search -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-widget">
+                <h3 class="search-title">Quick Car Search</h3>
+                <form class="search-form">
+                    <div class="search-group">
+                        <label>Pick-up Location</label>
+                        <select>
+                            <option>Bahrain International Airport</option>
+                            <option>Manama City Center</option>
+                            <option>Salimabad Office</option>
+                            <option>Juffair</option>
+                            <option>Seef District</option>
+                        </select>
+                    </div>
+                    <div class="search-group">
+                        <label>Pick-up Date</label>
+                        <input type="date" id="pickupDate">
+                    </div>
+                    <div class="search-group">
+                        <label>Return Date</label>
+                        <input type="date" id="returnDate">
+                    </div>
+                    <div class="search-group">
+                        <label>Car Type</label>
+                        <select>
+                            <option>All Types</option>
+                            <option>Economy</option>
+                            <option>Sedan</option>
+                            <option>SUV</option>
+                            <option>Luxury</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-search"></i> Search Cars
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Fleet -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Fleet</span>
+                <h2 class="section-title">Premium Vehicle Selection</h2>
+                <p class="section-subtitle">Choose from our curated collection of top-quality vehicles</p>
+            </div>
+            <div class="fleet-grid">
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600&q=80" alt="Nissan Sunny">
+                        <span class="car-badge economy">Economy</span>
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Nissan Sunny</h3>
+                        <div class="car-specs">
+                            <span><i class="fas fa-user"></i> 5 Seats</span>
+                            <span><i class="fas fa-cog"></i> Auto</span>
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                        </div>
+                        <div class="car-price">
+                            <span class="price-amount">BHD 12</span>
+                            <span class="price-period">/day</span>
+                        </div>
+                        <a href="car-detail.html" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=600&q=80" alt="Toyota Corolla">
+                        <span class="car-badge sedan">Sedan</span>
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Toyota Corolla</h3>
+                        <div class="car-specs">
+                            <span><i class="fas fa-user"></i> 5 Seats</span>
+                            <span><i class="fas fa-cog"></i> Auto</span>
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                        </div>
+                        <div class="car-price">
+                            <span class="price-amount">BHD 15</span>
+                            <span class="price-period">/day</span>
+                        </div>
+                        <a href="car-detail.html" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=600&q=80" alt="Toyota Camry">
+                        <span class="car-badge premium">Premium</span>
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Toyota Camry</h3>
+                        <div class="car-specs">
+                            <span><i class="fas fa-user"></i> 5 Seats</span>
+                            <span><i class="fas fa-cog"></i> Auto</span>
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                        </div>
+                        <div class="car-price">
+                            <span class="price-amount">BHD 22</span>
+                            <span class="price-period">/day</span>
+                        </div>
+                        <a href="car-detail.html" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=600&q=80" alt="Nissan Kicks">
+                        <span class="car-badge suv">SUV</span>
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Nissan Kicks</h3>
+                        <div class="car-specs">
+                            <span><i class="fas fa-user"></i> 5 Seats</span>
+                            <span><i class="fas fa-cog"></i> Auto</span>
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                        </div>
+                        <div class="car-price">
+                            <span class="price-amount">BHD 16</span>
+                            <span class="price-period">/day</span>
+                        </div>
+                        <a href="car-detail.html" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&q=80" alt="Toyota Fortuner">
+                        <span class="car-badge suv">SUV</span>
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Toyota Fortuner</h3>
+                        <div class="car-specs">
+                            <span><i class="fas fa-user"></i> 7 Seats</span>
+                            <span><i class="fas fa-cog"></i> Auto</span>
+                            <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                        </div>
+                        <div class="car-price">
+                            <span class="price-amount">BHD 28</span>
+                            <span class="price-period">/day</span>
+                        </div>
+                        <a href="car-detail.html" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600&q=80" alt="BMW 3 Series">
+                        <span class="car-badge luxury">Luxury</span>
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">BMW 3 Series</h3>
+                        <div class="car-specs">
+                            <span><i class="fas fa-user"></i> 5 Seats</span>
+                            <span><i class="fas fa-cog"></i> Auto</span>
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                        </div>
+                        <div class="car-price">
+                            <span class="price-amount">BHD 45</span>
+                            <span class="price-period">/day</span>
+                        </div>
+                        <a href="car-detail.html" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="fleet.html" class="btn btn-primary btn-lg">View All Vehicles <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Why Turbo</span>
+                <h2 class="section-title">Experience the Difference</h2>
+                <p class="section-subtitle">We go above and beyond to ensure your rental experience is exceptional</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <h3 class="feature-title">Premium Fleet</h3>
+                    <p class="feature-desc">Well-maintained, latest model vehicles for a smooth and safe journey.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3 class="feature-title">Best Rates</h3>
+                    <p class="feature-desc">Competitive pricing with transparent no-hidden-fee policy.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="feature-title">Quick Service</h3>
+                    <p class="feature-desc">Fast booking process and efficient pickup/return procedures.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="feature-title">24/7 Support</h3>
+                    <p class="feature-desc">Round-the-clock customer support for any assistance you need.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3 class="feature-title">Airport Service</h3>
+                    <p class="feature-desc">Free pickup and drop-off at Bahrain International Airport.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Full Insurance</h3>
+                    <p class="feature-desc">Comprehensive insurance coverage for complete peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">What Our Clients Say</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Excellent service! The car was in perfect condition and the staff was very helpful. Will definitely rent again!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
+                        <div class="author-info">
+                            <h4>Ahmed Al Khalifa</h4>
+                            <span>Business Traveler</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Best car rental in Bahrain! Great prices, amazing fleet, and the airport pickup service was seamless."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
+                        <div class="author-info">
+                            <h4>Sarah Mohammed</h4>
+                            <span>Tourist</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"We've been using Turbo for our corporate rentals for years. Always reliable and professional!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Client">
+                        <div class="author-info">
+                            <h4>John Peterson</h4>
+                            <span>Corporate Client</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Hit the Road?</h2>
+                <p class="cta-text">Book your dream car today and experience premium rental service in Bahrain.</p>
+                <div class="cta-buttons">
+                    <a href="fleet.html" class="btn btn-primary btn-lg">Browse Fleet</a>
+                    <a href="tel:+97317221211" class="btn btn-outline btn-lg">
+                        <i class="fas fa-phone-alt"></i> Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <span class="logo-icon"><i class="fas fa-bolt"></i></span>
+                            <span class="logo-text">TURBO</span>
+                        </a>
+                        <p class="footer-desc">Premium car rental services in Bahrain. Experience the thrill of driving with our exceptional fleet.</p>
+                        <div class="footer-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="fleet.html">Our Fleet</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="services.html">Daily Rental</a></li>
+                            <li><a href="services.html">Monthly Rental</a></li>
+                            <li><a href="services.html">Airport Transfer</a></li>
+                            <li><a href="services.html">Corporate Rental</a></li>
+                            <li><a href="services.html">Chauffeur Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Salimabad, Bahrain</li>
+                            <li><i class="fas fa-phone-alt"></i> +973 17221211</li>
+                            <li><i class="fab fa-whatsapp"></i> +973 39509922</li>
+                            <li><i class="fas fa-envelope"></i> info@turbocarbh.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 Turbo Rent a Car. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
